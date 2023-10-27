@@ -1,0 +1,13 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "html.format.indentHandlebars": false,
+  "html.format.extraLiners": "head, body, /html",
+  "html.format.templating": false,
+  "html.format.preserveNewLines": true,
+  "prettier.printWidth": 150
+  // "html.format.contentUnformatted": "pre,code,textarea"
+}
