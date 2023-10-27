@@ -1,0 +1,153 @@
+html {
+  font-family: sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.navbar {
+  max-width: 640px;
+  margin: 50px auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo {
+  margin-right: 30px;
+}
+
+.navbar_navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  color: #5c6b70;
+}
+
+.navbar_navigation-item {
+  margin-left: 50px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: gray;
+}
+
+.main {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form__input-input {
+  width: 100%;
+}
+
+.form__input {
+  width: 100%;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form__textarea {
+  width: inherit;
+  font-size: 18px;
+  padding: 12px 20px;
+  background-color: rgb(255, 252, 252);
+  margin-bottom: 10px;
+}
+
+.form__submit {
+  border: none;
+  background-color: rgb(205, 237, 237);
+  border-radius: 5px;
+  color: white;
+}
+
+.form__submit.hover {
+  background-color: rgb(205, 237, 237);
+}
+
+.entry {
+  margin-top: 50px;
+}
+
+.entery__title {
+  display: inline;
+  font-size: 18px;
+}
+
+.entery__date {
+  color: #5c6b70;
+}
+
+.entery__content {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.footer {
+  background-color: #c2c8ca;
+  padding: 40px 0;
+  margin-top: 50px;
+  border-top: 4px solid black;
+  font-size: 12px;
+}
+.footer__content {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer .left {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.footer__item {
+  margin-bottom: 5px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__item:hover {
+  text-decoration: underline;
+}
