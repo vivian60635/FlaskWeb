@@ -19,6 +19,13 @@ def for_loop():
     return render_template("for_loop.html", planets=planets)
 
 
+@app.route("/to_do/")
+def to_do():
+    todos = ["Get milk", "Learn Programming"]
+
+    return render_template("to_do.html", todos=todos)
+
+
 @app.route("/for_loop/dict")
 def for_loop_condition():
     customers = {"Bob": "Windows", "Anna": "MacOS", "Adam": "Linux", "Alex": "Linux"}
