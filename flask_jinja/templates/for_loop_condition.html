@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For loop with Condition</title>
+  </head>
+  <body>
+    <h1>Customer System</h1>
+    <ul>
+      {% for name, os in customers.items() %} {% if os == "Linux"%}
+      <li>{{name}} is {{os}} user</li>
+
+      {% endif%} {% endfor%}
+    </ul>
+  </body>
+</html>
