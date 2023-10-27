@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Structure</title>
+  </head>
+  <body>
+    <h1>Data Structure in Jinja2</h1>
+
+    {% if compony == "Apple"%}
+    <h2>Avaliable Apple Product</h2>
+    <li>{{apple[0]}}</li>
+    <li>{{apple[1]}}</li>
+    <li>{{apple[2]}}</li>
+
+    {% elif compony == "Microsoft"%}
+    <h2>Avaliable Microsoft Product</h2>
+    <li>{{microsoft[0]}}</li>
+    <li>{{microsoft[1]}}</li>
+    <li>{{microsoft[2]}}</li>
+
+    {% else %}
+    <h2>No {{compony}} product avaliable</h2>
+
+    {% endif %}
+  </body>
+</html>
