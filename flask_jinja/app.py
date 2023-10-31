@@ -21,7 +21,7 @@ def for_loop():
 
 @app.route("/to_do/")
 def to_do():
-    todos = ["Get milk", "Learn Programming"]
+    todos = [("Get milk", True), ("Learn Programming", False)]
 
     return render_template("to_do.html", todos=todos)
 
