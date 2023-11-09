@@ -1,3 +1,5 @@
+{% from 'macros.jinja2' import todo_li%}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,13 +9,11 @@
   </head>
   <body>
     <h1>Data Structure in Jinja2</h1>
-    {% set num_todo = todos | length %} 
-    {% if num_todo > 0 %}
-    <p>you have {{num_todo}} left to do today</p>
+    {% set num_todo = todos | length %} {% if num_todo > 0 %}
+    <p>you have {{num_todo}} to do today</p>
+    {% for todo, complete in todos %} {{ todo_li(todo, complete)}} {% endfor %}
+    {% else %}
+    <p>you havenothing to do today</p>
     {% endif %}
-
-    {% for todo in todos %}
-    <li>{{todo}}</li>
-    {% endfor %}    
   </body>
 </html>

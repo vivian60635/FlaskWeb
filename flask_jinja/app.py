@@ -19,6 +19,27 @@ def for_loop():
     return render_template("for_loop.html", planets=planets)
 
 
+todos = [("Get milk", True), ("Learn Programming", False)]
+
+
+@app.route("/base_todo")
+def base_todo():
+    return render_template("base_home.html", todos=todos)
+
+
+@app.route("/base_todo/<string:todo>")
+def todo_item(todo: str):
+    for text, completed in todos:
+        if text == todo:
+            complete_text = "[X]" if completed else "[]"
+            title = f"{complete_text} - Todos"
+            return render_template(
+                "base_todo.html", todos=todos, text=todo, completed=completed
+            )
+        else:
+            return render_template("base_nofound.html", text=todo)
+
+
 @app.route("/to_do/")
 def to_do():
     todos = [("Get milk", True), ("Learn Programming", False)]

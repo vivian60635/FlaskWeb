@@ -1,0 +1,7 @@
+{% extends 'base.html' %} {% block content %}
+<h1>{{text}}</h1>
+{% if completed == True %}
+<p>you have done this todo</p>
+{% else %}
+<p>you haven't done this todo yet, why don't you do it now</p>
+{% endif %} {% endblock %}
