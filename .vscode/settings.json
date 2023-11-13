@@ -10,12 +10,11 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  //   "python.analysis.typeCheckingMode": "off"
-  //   "html.format.indentHandlebars": false,
+
   "html.format.extraLiners": "head, body, /html",
-  //   "html.format.templating": false,
-  "html.format.preserveNewLines": true
-  //   "prettier.printWidth": 150
-  //   "python.formatting.provider": "black"
-  // "html.format.contentUnformatted": "pre,code,textarea"
+  "html.format.preserveNewLines": true,
+
+  "files.associations": {
+    "*.html": "jinja-html"
+  }
 }

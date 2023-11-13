@@ -1,6 +1,21 @@
-{% extends 'base.html' %} {% from 'macros.jinja2' import todo_li%} {% block
-content %}
-<h1>Not found</h1>
-<p>We're sorry, this todo item was not found</p>
-<p>{{text}}</p>
-{% endblock %}
+{% extends 'base.html' %} {% from 'macros.jinja2' import todo_li%}
+
+<!-- prettier-ignore-start -->
+<script>
+
+  {% block head %}
+    <style>
+    .notfound {
+        background-color: gray;
+        font-size: 125%;
+    }
+    </style>
+  {% endblock %}
+
+  {% block content %}
+  <h1>Not found</h1>
+  <p>We're sorry, this todo item was not found</p>
+  <p class="notfound">{{text}}</p>
+  {% endblock %}
+</script>
+<!-- prettier-ignore-end -->

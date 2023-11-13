@@ -29,13 +29,15 @@ def base_todo():
 
 @app.route("/base_todo/<string:todo>")
 def todo_item(todo: str):
+    tasks = [task[0] for task in todos]
     for text, completed in todos:
-        if text == todo:
-            complete_text = "[X]" if completed else "[]"
-            title = f"{complete_text} - Todos"
-            return render_template(
-                "base_todo.html", todos=todos, text=todo, completed=completed
-            )
+        if todo in tasks:
+            if text == todo:
+                complete_text = "[X]" if completed else "[]"
+                # title = f"{complete_text} - Todos"
+                return render_template(
+                    "base_todo.html", todos=todos, text=todo, completed=completed
+                )
         else:
             return render_template("base_nofound.html", text=todo)
 
