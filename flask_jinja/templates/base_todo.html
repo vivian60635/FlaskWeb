@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block head %} {% if completed == True %}
+<style>
+  p {
+    margin: 8px 16px;
+    background-color: aquamarine;
+    padding: 12px 24px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+</style>
+{% else %}
+<style>
+  p {
+    margin: 8px 16px;
+    background-color: darkred;
+    color: white;
+    padding: 12px 24px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+</style>
+{% endif %} {% endblock %} {% block content %}
+<h1>{{text}}</h1>
+{% if completed == True %}
+<p>you have done this todo</p>
+{% else %}
+<p>you haven't done this todo yet, why don't you do it now</p>
+{% endif %} {% endblock %}

@@ -1,0 +1,20 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "prettier.printWidth": 80,
+  // "python.formatting.provider": "black"
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  "html.format.extraLiners": "head, body, /html",
+  "html.format.preserveNewLines": true,
+
+  "files.associations": {
+    "*.html": "jinja-html"
+  }
+}

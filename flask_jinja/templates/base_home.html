@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% from 'macros.jinja2' import todo_li%}
+
+<!-- prettier-ignore-start -->
+<script>
+  {% block head %}
+    <style>
+
+    </style>
+  {% endblock %}
+
+  {% block content %}
+      <h1>Data Structure in Jinja2</h1>
+      {% set num_todo = todos | length %}
+
+      {% if num_todo > 0 %}
+          <p>you have {{num_todo}} to do today</p>
+          {% for todo, complete in todos %}
+              {{ todo_li(todo, complete)}}
+          {% endfor %}
+      {% else %}
+          <p>you havenothing to do today</p>
+      {% endif %}
+
+  {% endblock %}
+</script>
+<!-- prettier-ignore-end -->
